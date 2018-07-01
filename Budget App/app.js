@@ -1,18 +1,8 @@
-// console.log('hello');
 
 
 
 var budgetController = (function(){
 
-    // var name = 'Mayank';
-    //  function intro(value){
-    //      console.log('My name is ' + value)
-    //  }
-    // return {
-    //     display : function(){
-    //         intro(name);
-    //     }
-    // }
     var obj = {
          totalIncome : 0,
          totalExpenses : 0,
@@ -42,11 +32,11 @@ var budgetController = (function(){
             updateBudget : function(type, value){
                 if(type === 'inc' ){
                     obj.totalIncome-=value;
-                    // obj.totalExpenses+=value;
+                  
                 }
                 if(type === 'exp'){
                     obj.totalExpenses-=value;
-                    // obj.totalIncome+=value;
+                   
                 }
                 obj.availBudget = obj.totalIncome - obj.totalExpenses;
                 obj.totalPercentExpenses = ((obj.totalExpenses/obj.totalIncome)*100).toFixed(1);
@@ -159,7 +149,7 @@ var UIController = (function(){
 
 var Controller = (function(BudgetCtrl, UICtrl){
 
-    // BudgetCtrl.display()
+    
 
     init();
     function init(){
@@ -218,7 +208,6 @@ var Controller = (function(BudgetCtrl, UICtrl){
     })
 
     var deleteItem = function (event){
-        // console.log(event.target.parentNode.parentNode.parentNode.parentNode.id)
 
         var itemId = event.target.parentNode.parentNode.parentNode.parentNode.id;
         var splitId;
